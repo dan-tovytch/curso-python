@@ -15,3 +15,9 @@ pessoa = {
     'idade': 900,
 
 }
+pessoa.setdefault('idade', 0)
+print(pessoa['idade'])
+# print(len(pessoa))
+
+for chave in pessoa.keys():
+    print(chave)
