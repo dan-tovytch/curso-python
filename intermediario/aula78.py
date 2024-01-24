@@ -1,37 +1,29 @@
-# 'Métodos úteis dos dicionários em Python'
-# len - quantas chaves
-# keys - iterável com as chaves
-# values - iterável com os valores
-# items - iterável com chaves e valores
-# setdefault - adiciona valor se a chave não existe
-# copy - retorna uma cópia rasa (shallow copy)
-# get - obtém uma chave
-# pop - Apaga um item com a chave especificada (del)
-# popitem - Apaga o último item adicionado
-# update - Atualiza um dicionário com outro
-p1 = {
-    'nome': 'Daniel',
-    'sobrenome': 'Melentovytch',
-}
-# print(p1['nome'])
-# print(p1.get('nome', 'Não existe'))
+# Sets - Conjuntos em Python (tipo set)
+# Conjuntos são ensinados na matemática
+# https://brasilescola.uol.com.br/matematica/conjunto.htm
+# Representados graficamente pelo diagrama de Venn
+# Sets em Python são mutáveis, porém aceitam apenas
+# tipos imutáveis como valor interno.
 
-# nome = p1.pop('nome')
-# print(nome)
-# print(p1)
-# ultioma_chave = p1.popitem()
-# print(ultioma_chave)
-# print(p1)
+# Criando um set
+# set(iterável) ou {1, 2, 3}
+# s1 = set('Luiz')
+s1 = set()  # vazio
+s1 = {'Daniel', 1, 2, 3}  # com dados
 
-# p1.update({
-#     'nome': 'novo valor',
-#     'idade': 20
-# })
-#
-# print(p1)
+# Sets são eficientes para remover valores duplicados
+# de iteráveis.
+# - Não aceitam valores mutáveis;
+# - Seus valores serão sempre únicos;
+# - não tem índexes;
+# - não garantem ordem;
+# - são iteráveis (for, in, not in)
 
-# p1.update(nome='novo valor', idade=20)
-# tupla = ('nome', 'novo valor'), ('idade', 20)
-lista = [['nome', 'novo valor'], ['idade', 20]]
-p1.update(lista)
-print(p1)
+# Métodos úteis:
+# add, update, clear, discard
+
+# Operadores úteis:
+# união | união (union) - Une
+# intersecção & (intersection) - Itens presentes em ambos
+# diferença - Itens presentes apenas no set da esquerda
+# diferença simétrica ^ - Itens que não estão em ambos
