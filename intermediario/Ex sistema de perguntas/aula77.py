@@ -30,15 +30,15 @@ for pergunta in perguntas:
         try:
             opcao = int(input('Escolha uma opção: '))
             if opcao == pergunta['Opções'].index(pergunta['Resposta']) + 1:
-                print('Você acertou!\n')
+                print('Você acertou 👍\n')
                 certas += 1
                 break
             else:
-                print('Resposta incorreta. Tente novamente.\n')
+                print('Você errou 👎\n')
                 erradas += 1
                 break
         except ValueError:
-            print('Insira uma opção válida!\n')
+            print('🚫 Insira uma opção válida!\n')
 
-print(f"Total de respostas corretas: {certas}")
-print(f"Total de respostas incorretas: {erradas}")
+print(f"✅ Total de respostas corretas: {certas}")
+print(f"❌ Total de respostas incorretas: {erradas}")
