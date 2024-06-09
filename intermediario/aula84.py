@@ -9,7 +9,7 @@ lista = [
     numero * 2
     for numero in range(10)
 ]
-print(lista)
+# print(lista)
 
 # Mapeamento de dados em list comprehension
 protutos = [
@@ -18,9 +18,20 @@ protutos = [
     { 'nome': 'p3', 'preco': 30 },  
 ]
 
-novo_produto = [
-    produto
+novos_produto = [
+    {**produto, 'preco': produto['preco'] * 1.05}
+    if produto['preco'] > 20 else {**produto}
     for produto in protutos
 ]
 
-print(*novo_produto, sep='\n')
+# print(*novos_produto, sep='\n')
+
+# lista = [n for n in range(10) if n < 5]
+novos_produto = [
+    {**produto, 'preco': produto['preco'] * 1.05}
+    if produto['preco'] > 20 else {**produto}
+    for produto in protutos
+    if (produto['preco'] * 1.05) > 20
+]
+
+print(novos_produto)
